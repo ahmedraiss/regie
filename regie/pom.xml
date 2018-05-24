@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ancfcc.gov.ma</groupId>
+	<artifactId>regie</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>regie-applicatif</module>
+		<module>regie-business</module>
+		<module>regie-dao</module>
+		<module>regie-presentation</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<struts2.version>2.5.14.1</struts2.version>
+		<log4j2.version>2.10.0</log4j2.version>
+		<sqljdbc4.version>2.10.0</sqljdbc4.version>
+		<spring.version>5.0.0.RELEASE</spring.version>
+		<hibernate.version>5.2.12.Final</hibernate.version>
+
+
+	</properties>
+
+
+	<dependencyManagement>
+
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-jpa -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jpa</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-bom</artifactId>
+				<version>${struts2.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-bom</artifactId>
+				<version>${log4j2.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>com.ancfcc.gov.ma</groupId>
+				<artifactId>regie-applicatif</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ancfcc.gov.ma</groupId>
+				<artifactId>regie-business</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ancfcc.gov.ma</groupId>
+				<artifactId>regie-dao</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Struts 2 -->
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-core</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
+
+			<!-- Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- JPA Vendor (Hibernate) -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+
+			<!-- Database Drivers (SQL Server) -->
+			<dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>sqljdbc4</artifactId>
+				<version>${sqljdbc4.version}</version>
+			</dependency>
+
+
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+
+
+	</dependencies>
+
+</project>
